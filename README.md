@@ -1,13 +1,22 @@
-# Kuro Coliving
-Architectural presentation for Setrasari, Bandung. Source for Railway deployment.
+# Kuro Coliving — concept 04
 
-Run `npm start` (Node 22+) and open port 3000. No dependencies or build step.
+Architectural presentation deployed on Railway from GitHub main.
 
-Features: mirrored ulin hero; six independent CSS 3D axonometry floors with scroll-driven separation; floor selector and plan explorer; text parallax; original locally synthesized instrumental with explicit on/off; responsive and reduced-motion support. `/health` is the Railway health check.
+## Current program
+- Basement: utility only.
+- Ground and L1: 12 conventional bays each, 2.6 × 5 m, plus lobby. Conceptual vehicle lift 3.5 × 6 m connects the two parking floors; no internal ramp in this option.
+- L2: indoor pool, gym, office and meeting.
+- L3 and L4: 10 orthogonal room modules per level, 3.2 × 7.5 m. 24 m² is module area, not verified net area after walls/shafts.
+- L5: cafe and terrace; seats not fixed.
 
-Architectural scope: conceptual diagrams, not construction drawings. Target 40 rooms is unverified; V02 parking estimate is 5–6 cars. Envelope 23 × 21.6 m is an assumption, not a surveyed fit. Existing schematic core circulation and accessible room allocation require revision. Hero is a generated material illustration, not proof of floor dimensions or indoor pool enclosure.
+24 drawn bays do not satisfy the earlier 36-car target. Capacity is a geometric test-fit, not a certified maximum. Swept paths, queueing, structural columns, accessible bays, pedestrian routes, evacuation and equipment specification remain unresolved. A 6.6 m main aisle is reserved; entry and local maneuvers need detailed analysis.
 
-2026-10-30: initial presentation release. Deployment target: Railway, GitHub main.
+Parcel outline is traced from the supplied cadastral screenshot and normalized to 855 m². Edge lengths are estimates, not survey measurements. Concept footprint 500 m² / 58.48% of the parcel; 60% user-supplied KDB implies a 513 m² ceiling, subject to legal confirmation of all applicable controls. Room rectangles are not clipped to the tapered perimeter. Hero photo remains an earlier conceptual ulin facade, not an updated verified elevation.
 
-## V03 — 2026-10-30
-Replaces rectangular envelope diagrams with uniformly area-normalized cadastral trace (855 sqm parcel, 500 sqm conceptual similar-shape footprint). Edge dimensions approximate only; no verified GSB. Room geometry and core circulation require further design. Adds proposed automated underground parking: 12 illustrative storage bays on each of 3 machine tiers = target 36, pending vendor usable count and geotechnical/permit verification. This is a scope addition, not a validated ground-floor capacity. New 72 BPM original electric-piano/bass instrumental replaces old melody.
+Original synthesized instrumental with on/off control is preserved. No autoplay. Reduced-motion support and text/axonometric parallax are retained. Axonometric includes utility basement plus six above-ground levels.
+
+## Checks
+`npm run check`
+`node tests/geometry.mjs`
+
+Geometry checks assert room/bay counts, rectangular sizes, containment and selected collision checks; they do not certify architectural feasibility.
